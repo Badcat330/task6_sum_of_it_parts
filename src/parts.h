@@ -15,8 +15,9 @@ class Part
 public:
     string name;
     Part(string const &n) : name(n) {};
-    void describe(void);
-    int count_howmany(Part const *p);
+    void describe();
+    int count_howmany(Part const *p) const ;
+    map<const Part*, int> subpart;
 };
 
 //**************** NameContainer ****************
@@ -27,8 +28,8 @@ private:
 	map<string,Part*> name_map;
 
 public:
-	NameContainer(void) {};
-	~NameContainer(void);
+	NameContainer() = default;
+	~NameContainer();
 	Part* lookup(string const &name);
 };
 
