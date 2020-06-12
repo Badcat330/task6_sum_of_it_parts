@@ -10,6 +10,7 @@ using namespace std;
 
 #include "parts.h"
 
+NameContainer partContainer;
 
 void load_definitions(const char* filename)
 {
@@ -70,7 +71,7 @@ void process_queries(const char* filename)
 
 int main(void) 
 {
-	load_definitions("definitions.txt");
-	process_queries("queries.txt");
+	load_definitions("/Users/alexglushko/Desktop/task6_sum_of_it_parts/src/definitions.txt");
+	process_queries("/Users/alexglushko/Desktop/task6_sum_of_it_parts/src/queries.txt");
 	return EXIT_SUCCESS;
 }
